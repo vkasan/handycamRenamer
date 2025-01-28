@@ -28,13 +28,14 @@ def rename(debug: bool,
             ts_mtime = int(os.stat(full_filename).st_mtime)
             ts_ctime = int(os.stat(full_filename).st_ctime)
             ts = min(ts_ctime, ts_mtime)
-            date = datetime.utcfromtimestamp(ts).strftime(new_filename_date_format)
+            date = datetime.fromtimestamp(ts).strftime(new_filename_date_format)
             new_filename = new_filename_format.format(date=date,
                                                       original=part_name,
                                                       ext=part_ext,
                                                       ext_lower=part_ext.lower())
+            new_full_filename = os.path.join(directory, new_filename)
             if debug:
-                print(f'[debug] Renaming {filename} to {new_filename}')
-            os.rename(full_filename, new_filename)
+                print(f'[debug] Renaming {filename} to {new_full_filename}')
+            os.rename(full_filename, new_full_filename)
 
     return files_renamed, files_skipped

@@ -22,7 +22,7 @@ allowed_length = 5
 # original = original filename without the extension
 # ext = original file extension (for example ".MTS")
 # ext_lower = original file extension but lowercase
-new_filename_format = '{date}{ext}'
+new_filename_format = '{date} {original}{ext}'
 
 # Datetime format
 # Codes are available at:
