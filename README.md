@@ -3,7 +3,7 @@
 ## Important information
 Created with Python 3.11 but it may work with older versions of Python
 
-!!! Your files must be taken directly from your Sony Handycam, this script relies heavily on FAT32 file metadata !!!
+!!! Your files must be taken directly from your Sony Handycam, as this script relies on the original file creation and modification dates (FAT32) !!!
 ## Configuration (IMPORTANT):
 Edit `config.py`
 ## Usage:
